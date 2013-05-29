@@ -1,0 +1,21 @@
+<h1>Listing diagnosis_requests</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diagnosis_requests.each do |diagnosis_request| %>
+  <tr>
+    <td><%= link_to 'Show', diagnosis_request %></td>
+    <td><%= link_to 'Edit', edit_diagnosis_request_path(diagnosis_request) %></td>
+    <td><%= link_to 'Destroy', diagnosis_request, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diagnosis request', new_diagnosis_request_path %>
